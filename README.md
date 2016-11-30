@@ -1,9 +1,9 @@
 # docker-SIU
 #checkout de proyectos en /c/Users/yourUser/SIU/
-docker-compose build
-docker-compose up -d
-docker exec -it dockerwindows_siu_1 bash
-./run.sh
+docker-compose build  
+docker-compose up -d  
+docker exec -it dockerwindows_siu_1 bash  
+./run.sh  
 
 /var/www/proyectos/guarani_3_10_2/lib/toba/bin/instalar
 service apache2 restart
