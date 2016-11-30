@@ -1,0 +1,9 @@
+siu:
+    build: ./php/
+    ports:
+        - "3000:80"
+    volumes:
+        - /c/Users/felipe/SIU/:/var/www/proyectos/
+#        - /media/felipe/Windows3/Users/Felipe/SIU/:/var/www/proyectos/
+    command: /bin/bash
+    tty: true
