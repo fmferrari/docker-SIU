@@ -1,6 +1,5 @@
 # docker-SIU
 #checkout de proyectos en /c/Users/felipe/SIU/
-
 docker-compose build
 docker-compose up -d
 docker exec -it dockerwindows_siu_1 bash
