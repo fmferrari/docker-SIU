@@ -5,8 +5,8 @@ RUN apt-get update && apt-get install -y wget unzip vim php-pear php5-dev build-
 RUN apt-get install -y postgresql postgresql-contrib phppgadmin
 RUN \
   apt-get update && \
-  apt-get install -y openjdk-7-jre 
- 
+  apt-get install -y openjdk-7-jre
+
 # APC
 RUN pear config-set php_ini /usr/local/etc/php/php.ini
 RUN pecl config-set php_ini /usr/local/etc/php/php.ini
@@ -43,14 +43,12 @@ RUN echo "local all postgres trust" >> /etc/postgresql/9.1/main/pg_hba.conf
 RUN export PGPASSWORD='postgres'
 
 RUN apt-get update \
-    && apt-get install -y --no-install-recommends openjdk-7-jre-headless 
+    && apt-get install -y --no-install-recommends openjdk-7-jre-headless
 ADD run.sh /run.sh
 ADD run.sh /var/www/app/run.sh
 RUN chmod -v +x /var/www/app/run.sh
 
-ADD run.sh /var/www/app/cargar_base.sh
+ADD cargar_base.sh /var/www/app/cargar_base.sh
 RUN chmod -v +x /var/www/app/cargar_base.sh
 
 CMD ["./run.sh"]
-
-

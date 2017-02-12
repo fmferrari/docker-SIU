@@ -30,13 +30,20 @@ apt-get install ttf-mscorefonts-installer
 
 #trabajo diario  
 docker-compose up -d  
-docker exec -it dockerwindows_siu_1 bash  
+docker exec -it dockersiu_siu_1 bash  
 ./run.sh  
+
+#Para usar xdebug tengo que generar el alias del host
+sudo ifconfig lo0 alias 10.254.254.254
 
 #para cargar base  
 su - postgres  
 psql -h localhost -p 5432 -U postgres -f /var/www/proyectos/guarani.sql guarani_prod  
-#tambien puedo correr ./cargar_base.sh
+#tambien puedo correr
+cd /var/www/app
+./cargar_base.sh
+cd /var/www/proyectos/guarani_3_10_2/bin/
+./guarani regenerar
 
 #servidor de reportes  
 java -jar /var/www/proyectos/guarani_3_10_2/lib/toba/php/3ros/JavaBridge/WEB-INF/lib/JavaBridge.jar SERVLET:8081  

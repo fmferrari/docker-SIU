@@ -1,9 +1,13 @@
 siu:
     build: ./php/
+    expose:
+        - 9000
     ports:
         - "3000:80"
     volumes:
-        - /c/Users/felipe/SIU/:/var/www/proyectos/
+        - /Users/felipe/Documents/SIU/:/var/www/proyectos/
 #        - /media/felipe/Windows3/Users/Felipe/SIU/:/var/www/proyectos/
     command: /bin/bash
     tty: true
+    environment:
+      OSX: 1
