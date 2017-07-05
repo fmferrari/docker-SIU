@@ -51,4 +51,8 @@ RUN chmod -v +x /var/www/app/run.sh
 ADD cargar_base.sh /var/www/app/cargar_base.sh
 RUN chmod -v +x /var/www/app/cargar_base.sh
 
+#Fuentes del servidor
+RUN chmod -R 755 /usr/share/fonts/
+COPY /fonts /usr/share/fonts/
+
 CMD ["./run.sh"]

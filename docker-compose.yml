@@ -1,4 +1,5 @@
 siu:
+    container_name: siu
     build: ./php/
     expose:
         - 9000

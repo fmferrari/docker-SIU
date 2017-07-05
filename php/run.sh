@@ -24,4 +24,5 @@ xdebug.remote_enable = 1
 xdebug.profiler_enable = 1" > /etc/php5/cli/conf.d/php.ini
 service postgresql start
 service apache2 start
-java -jar /var/www/proyectos/guarani_3_10_2/lib/toba/php/3ros/JavaBridge/WEB-INF/lib/JavaBridge.jar SERVLET:8081
+nohup java -jar /var/www/proyectos/guarani_3_10_2/lib/toba/php/3ros/JavaBridge/WEB-INF/lib/JavaBridge.jar SERVLET:8081 > /dev/null 2>&1 &
+#java -jar /var/www/proyectos/guarani_3_10_2/lib/toba/php/3ros/JavaBridge/WEB-INF/lib/JavaBridge.jar SERVLET:8081

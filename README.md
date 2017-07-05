@@ -2,7 +2,7 @@
 #checkout de proyectos en /c/Users/yourUser/SIU/
 docker-compose build  
 docker-compose up -d  
-docker exec -it dockerwindows_siu_1 bash  
+docker exec -it siu bash  
 ./run.sh  
 
 /var/www/proyectos/guarani_3_10_2/lib/toba/bin/instalar  
@@ -30,7 +30,7 @@ apt-get install ttf-mscorefonts-installer
 
 #trabajo diario  
 docker-compose up -d  
-docker exec -it dockersiu_siu_1 bash  
+docker exec -it siu bash  
 ./run.sh  
 
 #Para usar xdebug tengo que generar el alias del host
