@@ -26,9 +26,9 @@ RUN a2enmod rewrite
 RUN a2enmod setenvif
 
 # Archivos de configuracion de apache
-ADD 3w.conf /etc/apache2/sites-enabled/3w.conf
-ADD toba.conf /etc/apache2/sites-enabled/toba.conf
-ADD preinscripcion.conf /etc/apache2/sites-enabled/preinscripcion.conf
+COPY 3w.conf /etc/apache2/sites-enabled/3w.conf
+COPY toba.conf /etc/apache2/sites-enabled/toba.conf
+COPY preinscripcion.conf /etc/apache2/sites-enabled/preinscripcion.conf
 
 #Configuración de postgres
 RUN chmod 755 -R /etc/phppgadmin/config.inc.php /etc/postgresql/9.1/main/pg_hba.conf /etc/postgresql/9.1/main/postgresql.conf

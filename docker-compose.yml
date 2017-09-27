@@ -5,6 +5,7 @@ siu:
         - 9000
     ports:
         - "3000:80"
+        - "5432:5432"
     volumes:
         - /Users/felipe/Documents/SIU/:/var/www/proyectos/
 #        - /media/felipe/Windows3/Users/Felipe/SIU/:/var/www/proyectos/
@@ -12,3 +13,14 @@ siu:
     tty: true
     environment:
       OSX: 1
+    # links:
+    #     - db
+
+
+#db:
+#    image: postgresql:latest
+#    env_file: db.env
+
+
+#nahuel.chaves@gmail.com
+#nchaves@zentricx.com
